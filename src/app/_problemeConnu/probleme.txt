@@ -1,0 +1,1 @@
+si les champs du register ne sont pas tous remplis l auth ne passe pas

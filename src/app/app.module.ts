@@ -10,7 +10,7 @@ import { FooterComponent } from './playout/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './auth/register/register.component';
-import { AttendeConfirmationMailComponent } from './auth/register/attende-confirmation-mail/attende-confirmation-mail.component';
+import { DashbordComponent } from './_dashbord/dashbord/dashbord.component';
 
 
 
@@ -25,7 +25,8 @@ import { AttendeConfirmationMailComponent } from './auth/register/attende-confir
     FooterComponent,
     HomeComponent,
     RegisterComponent,
-    AttendeConfirmationMailComponent,
+    DashbordComponent,
+
 
 
   ],

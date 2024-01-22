@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { RegisterService } from './_service/register.service.service';
 import { response } from 'express';
 import { UserInterface } from './_interface/user.interface';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +16,7 @@ export class RegisterComponent {
   registerForm: FormGroup;
   userData!: UserInterface;
 
-  constructor(private fb: FormBuilder, private Service: RegisterService) {
+  constructor(private fb: FormBuilder, private Service: RegisterService, private router: Router) {
     this.registerForm = this.fb.group({
       nom: [null, [Validators.required, Validators.minLength(2)]],
       prenom: [null, Validators.required],
@@ -35,6 +36,7 @@ export class RegisterComponent {
       this.Service.register(userData).subscribe(
         (response) => {
           console.log('Enregistrement réussi:', response);
+          this.router.navigate(['/login'])
         }, (error) => {
           console.error('Erreur lors de l\'enregistrement:', error);
         }
