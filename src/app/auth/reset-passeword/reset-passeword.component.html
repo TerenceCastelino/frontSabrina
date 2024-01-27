@@ -1,0 +1,40 @@
+<!-- reset-passeword.component.html -->
+
+<div class="container">
+  <h2>Réinitialisation du mot de passe</h2>
+
+  <!-- Affichage du message d'erreur s'il y en a un -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Formulaire de réinitialisation du mot de passe -->
+  <form [formGroup]="resetForm" (ngSubmit)="onSubmit()">
+    <!-- Champ du nouveau mot de passe -->
+    <div class="form-group">
+      <label for="password">Nouveau mot de passe :</label>
+      <input type="password" id="password" formControlName="newPassword" />
+      <div *ngIf="resetForm.get('password')?.hasError('required')" class="error-message">
+        Le nouveau mot de passe est requis.
+      </div>
+      <div *ngIf="resetForm.get('password')?.hasError('minlength')" class="error-message">
+        Le nouveau mot de passe doit contenir au moins 6 caractères.
+      </div>
+    </div>
+
+    <!-- Champ de confirmation du nouveau mot de passe -->
+    <div class="form-group">
+      <label for="newPassword2">Confirmer le nouveau mot de passe :</label>
+      <input type="password" id="newPassword2" formControlName="newPassword2" />
+      <div *ngIf="resetForm.get('newPassword2')?.hasError('required')" class="error-message">
+        La confirmation du nouveau mot de passe est requise.
+      </div>
+      <div *ngIf="resetForm.hasError('mismatch')" class="error-message">
+        Les champs du mot de passe ne correspondent pas.
+      </div>
+    </div>
+
+    <!-- Bouton de soumission du formulaire -->
+    <button type="submit" [disabled]="isLoading">Réinitialiser le mot de passe</button>
+  </form>
+</div>

@@ -1,0 +1,39 @@
+/* navbar.component.css */
+
+.navbar {
+    background-color: #333;
+    /* Couleur de fond de la barre de navigation */
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    /* Supprime les puces de la liste */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Utilise le modèle de boîte flexible pour aligner les éléments horizontalement */
+}
+
+li {
+    margin-right: 20px;
+    /* Marge entre les éléments de la liste */
+}
+
+a {
+    text-decoration: none;
+    /* Supprime la décoration de lien par défaut */
+    color: white;
+    /* Couleur du texte des liens */
+    font-weight: bold;
+    /* Style de police en gras */
+    font-size: 16px;
+    /* Taille de la police */
+    transition: color 0.3s ease;
+    /* Animation de transition pour la couleur du texte */
+}
+
+a:hover {
+    color: #ffcc00;
+    /* Couleur du texte au survol du lien */
+}

@@ -1,25 +1,19 @@
-<p>login works!</p>
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-  <label for="email">Email:</label>
-  <input type="email" id="email" formControlName="emailUtilisateur">
-  <label for="motsDePasse">Mot de passe:</label>
-  <input type="password" id="motsDePasse" formControlName="motsDePasse">
-  <button type="submit">Se connecter</button>
-</form>
-<p *ngIf="booleanConfirmed">{{ errorMessage }}</p>
-<button *ngIf="booleanConfirmed" (click)="click()">Renvoyer le mail</button>
-<p *ngIf="loading">Chargement en cours...</p>
+<div class="login-container">
+  <p>login works!</p>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label for="email">Email:</label>
+    <input type="email" id="email" formControlName="emailUtilisateur">
+    <label for="motsDePasse">Mot de passe:</label>
+    <input type="password" id="motsDePasse" formControlName="motsDePasse">
+    <button type="submit" [disabled]="loading">
+      Se connecter
+      <div *ngIf="loading" class="spinner"></div>
+    </button>
+  </form>
+  <p *ngIf="booleanConfirmed">{{ errorMessage }}</p>
+  <button *ngIf="booleanConfirmed" (click)="click()">Renvoyer le mail</button>
+  <p *ngIf="loading">Chargement en cours...</p>
 
-    
-    <!-- empecher la connection si email confirmer est a false
-    afficher un message a la connection si emali confimer est a false = tu dois valider t on email depuit ta boite mail
-    avec un ngif
-    
-    
-     etape
-     le boquer au login et l avertir 
-     mettre a disposition un bouton pour renvoyer le mail
-     quand il cliquera sur le lien il sera rediriger vers un compenent intermediare qui verifira le parametre de l url par a port a 
-     la colonne hablabla dans la base de donner
-     
-    --> 
+  <!-- Bouton Mot de passe oublié -->
+  <button (click)="forgotPassword()">Mot de passe oublié</button>
+</div>

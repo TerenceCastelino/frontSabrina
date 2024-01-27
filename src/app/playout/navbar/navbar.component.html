@@ -1,10 +1,12 @@
+<!-- navbar.component.html -->
 
-<nav>
-    <ul>
-      <li><a routerLink="home">Accueil</a></li>
-      <li><a routerLink="login">login</a></li>
-      <li><a routerLink="register">register</a></li>
-
-    </ul>
-  </nav>
-  
+<nav class="navbar">
+  <ul>
+    <li><a routerLink="home">Accueil</a></li>
+    <li *ngIf="!isLoggedIn"><a routerLink="login">Login</a></li>
+    <li *ngIf="!isLoggedIn"><a routerLink="register">Register</a></li>
+    <li *ngIf="isLoggedIn"><a (click)="logout()">Se déconnecter</a></li>
+    <!-- <li *ngIf="isLoggedIn"><a routerLink="dashboard/:userId">dashboard</a></li> -->
+    <li *ngIf="isLoggedIn"><a (click)="redirectToDashboard()">Dashboard</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,24 @@
+/* app.component.css */
+
+.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    /* Barre de navigation, Contenu principal, Pied de page */
+    min-height: 100vh;
+    /* Garantit que la grille prend toute la hauteur de la vue */
+}
+
+header,
+footer {
+    background-color: #333;
+    /* Couleur de fond pour la barre de navigation et le pied de page */
+    color: white;
+    /* Couleur du texte */
+    padding: 10px;
+}
+
+main {
+    padding: 20px;
+    overflow-y: auto;
+    /* Permet un défilement vertical si le contenu est plus grand que l'écran */
+}
