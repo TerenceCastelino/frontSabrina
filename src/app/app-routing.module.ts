@@ -4,9 +4,10 @@ import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { ConfirmedMailComponent } from './auth/confirmed-mail/confirmed-mail.component';
-import { DashbordComponent } from './_dashbord/dashbord/dashbord.component';
+import { DashbordComponent } from './_dashbord/dashbord.component';
 import { AuthGuard } from './_shared/_guarde/auth-guard.guard';
 import { ResetPasswordComponent } from './auth/reset-passeword/reset-passeword.component';
+import { EnvoisMailPasswordComponent } from './auth/envois-mail-password/envois-mail-password.component';
 
 
 
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'confirmation-email/:confirmationHash', component: ConfirmedMailComponent },
   { path: 'dashboard/:userId', component: DashbordComponent, canActivate: [AuthGuard] },
+  { path: 'resetPassword', component: EnvoisMailPasswordComponent },
   { path: 'resetPassword/:urlResetPasswordHash', component: ResetPasswordComponent },
 
 

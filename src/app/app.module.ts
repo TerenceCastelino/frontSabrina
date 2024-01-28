@@ -10,12 +10,13 @@ import { NavbarComponent } from './playout/navbar/navbar.component';
 import { FooterComponent } from './playout/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { DashbordComponent } from './_dashbord/dashbord/dashbord.component';
+import { DashbordComponent } from './_dashbord/dashbord.component';
 // Importez le service TokenService
 import { TokenService } from './_shared/_service/jwt.service'; // Assurez-vous que le chemin est correct
 // Importez l'interceptor TokenInterceptor
 import { TokenInterceptor } from './_shared/_interceptor/token.interceptor';
-import { ResetPasswordComponent } from './auth/reset-passeword/reset-passeword.component'; // Assurez-vous que le chemin est correct
+import { ResetPasswordComponent } from './auth/reset-passeword/reset-passeword.component';
+import { EnvoisMailPasswordComponent } from './auth/envois-mail-password/envois-mail-password.component'; // Assurez-vous que le chemin est correct
 
 
 
@@ -29,7 +30,8 @@ import { ResetPasswordComponent } from './auth/reset-passeword/reset-passeword.c
     HomeComponent,
     RegisterComponent,
     DashbordComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    EnvoisMailPasswordComponent
 
 
 

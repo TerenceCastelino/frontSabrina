@@ -108,6 +108,8 @@ export class LoginComponent implements OnInit {
     }
   }
   forgotPassword(): void {
+
+    this.router.navigate(['resetPassword']);
     // Logique pour gérer le "Mot de passe oublié"
     // Vous pouvez rediriger l'utilisateur vers une page de réinitialisation du mot de passe, par exemple
     // Ou afficher un modèle de réinitialisation du mot de passe, selon vos besoins
