@@ -71,8 +71,14 @@ export class LoginComponent implements OnInit {
                 } else {
                   this.booleanConfirmed = false;
 
-                  // Redirection vers une autre page (à décommenter et personnaliser)
-                  this.router.navigate([`dashboard/${userId}`]);
+                  if (userDetails.role === 'utilisateur') {
+                    // Redirection vers une autre page (à décommenter et personnaliser)
+                    this.router.navigate([`dashboard/user/${userId}`]);
+                  }
+                  if (userDetails.role === 'admin') {
+                    this.router.navigate([`dashboard/admin/${userId}`]);
+                  }
+
                 }
 
                 this.loading = false;

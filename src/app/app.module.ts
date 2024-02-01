@@ -16,7 +16,10 @@ import { TokenService } from './_shared/_service/jwt.service'; // Assurez-vous q
 // Importez l'interceptor TokenInterceptor
 import { TokenInterceptor } from './_shared/_interceptor/token.interceptor';
 import { ResetPasswordComponent } from './auth/reset-passeword/reset-passeword.component';
-import { EnvoisMailPasswordComponent } from './auth/envois-mail-password/envois-mail-password.component'; // Assurez-vous que le chemin est correct
+import { EnvoisMailPasswordComponent } from './auth/envois-mail-password/envois-mail-password.component';
+import { AdminDashboardComponent } from './adminDashboard/admin-dashboard/admin-dashboard.component';
+import { Model1Component } from './modelTiny/model1/model1.component';
+import { Model2Component } from './modelTiny/model2/model2.component'; // Assurez-vous que le chemin est correct
 
 
 
@@ -31,7 +34,10 @@ import { EnvoisMailPasswordComponent } from './auth/envois-mail-password/envois-
     RegisterComponent,
     DashbordComponent,
     ResetPasswordComponent,
-    EnvoisMailPasswordComponent
+    EnvoisMailPasswordComponent,
+    AdminDashboardComponent,
+    Model1Component,
+    Model2Component
 
 
 

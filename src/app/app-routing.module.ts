@@ -8,6 +8,9 @@ import { DashbordComponent } from './_dashbord/dashbord.component';
 import { AuthGuard } from './_shared/_guarde/auth-guard.guard';
 import { ResetPasswordComponent } from './auth/reset-passeword/reset-passeword.component';
 import { EnvoisMailPasswordComponent } from './auth/envois-mail-password/envois-mail-password.component';
+import { AdminDashboardComponent } from './adminDashboard/admin-dashboard/admin-dashboard.component';
+import { Model1Component } from './modelTiny/model1/model1.component';
+import { Model2Component } from './modelTiny/model2/model2.component';
 
 
 
@@ -17,9 +20,12 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'confirmation-email/:confirmationHash', component: ConfirmedMailComponent },
-  { path: 'dashboard/:userId', component: DashbordComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard/user/:userId', component: DashbordComponent, canActivate: [AuthGuard] },
+  { path: 'dashboard/admin/:userId', component: AdminDashboardComponent, canActivate: [AuthGuard] },
   { path: 'resetPassword', component: EnvoisMailPasswordComponent },
   { path: 'resetPassword/:urlResetPasswordHash', component: ResetPasswordComponent },
+  { path: 'modelOne', component: Model1Component },
+  { path: 'modelTwo', component: Model2Component },
 
 
   // { path : '404', component: },

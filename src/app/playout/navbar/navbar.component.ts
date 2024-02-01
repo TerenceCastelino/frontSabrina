@@ -39,15 +39,27 @@ export class NavbarComponent implements OnInit {
 
       // Obtenez l'ID de l'utilisateur à partir du jeton décodé
       const userId = decodedToken.userId
+      const role = decodedToken.role
 
 
-        ; // Remplacez idUser avec la clé appropriée dans votre jeton
+      if (role === 'utilisateur') {
+        if (userId) {
+          // Redirigez vers la route du tableau de bord avec l'ID de l'utilisateur
+          this.router.navigate([`dashboard/user/${userId}`]);
+        }
+
+      }
+      if (role === 'admin') {
+        if (userId) {
+          // Redirigez vers la route du tableau de bord avec l'ID de l'utilisateur
+          this.router.navigate([`dashboard/admin/${userId}`]);
+        }
+
+      }
+
+      ; // Remplacez idUser avec la clé appropriée dans votre jeton
       console.log(userId, 'l id qui se trouve dans la navbar');
 
-      if (userId) {
-        // Redirigez vers la route du tableau de bord avec l'ID de l'utilisateur
-        this.router.navigate([`dashboard/${userId}`]);
-      }
     }
   }
 }
