@@ -1,0 +1,104 @@
+/* Ajoutez ces styles à votre fichier SCSS */
+/* Ajouter ceci dans styles.css ou styles.scss */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Ajoutez ces styles à votre fichier SCSS */
+
+.site-description {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+    font-family: 'Arial', sans-serif;
+    /* Utilisez la police de votre choix */
+    font-size: 18px;
+    color: #333;
+    /* Couleur du texte */
+}
+
+.luxury-text {
+    font-weight: bold;
+    color: #4caf50;
+    /* Couleur du texte pour le mot "luxe" */
+}
+
+.concept-text {
+    margin-top: 20px;
+}
+
+.reserve-text {
+    margin-top: 20px;
+}
+
+.tiny-house-text {
+    margin-top: 20px;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.image-box {
+    text-align: center;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.model1-image,
+.model2-image {
+    max-height: 200px;
+    /* Ajustez la hauteur souhaitée */
+    object-fit: cover;
+    /* Redimensionne l'image tout en préservant les proportions */
+}
+
+.description {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-family: 'Arial', sans-serif;
+    /* Utilisez la police de votre choix */
+    font-size: 16px;
+    color: #333;
+    /* Couleur du texte */
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}

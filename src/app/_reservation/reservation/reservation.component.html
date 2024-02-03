@@ -1,0 +1,25 @@
+<!-- reservation.component.html -->
+
+<!-- En-tête avec le nom du mois et de l'année -->
+<h1>{{ currentMonthName }} {{ currentYear }}</h1>
+
+<!-- Contenu du calendrier -->
+<div class="calendar">
+  <!-- Jours de la semaine -->
+  <div class="weekdays">
+    <div *ngFor="let day of daysInMonth">{{ day }}</div>
+  </div>
+
+  <!-- Jours du mois -->
+  <div class="days">
+    <div *ngFor="let date of datesInMonth" (click)="selectDate(date)" [class.selected]="isDateSelected(date)">
+      {{ date.getDate() }}
+    </div>
+  </div>
+
+  <!-- Boutons pour changer de mois -->
+  <div class="navigation">
+    <button (click)="previousMonth()" class="nav-button"><<</button>
+    <button (click)="nextMonth()" class="nav-button">>></button>
+  </div>
+</div>

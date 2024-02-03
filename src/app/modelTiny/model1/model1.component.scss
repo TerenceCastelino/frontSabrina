@@ -1,0 +1,25 @@
+/* model1.component.scss */
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Pour que les images passent à la ligne si nécessaire */
+}
+
+.image-container>div {
+    flex: 0 0 48%;
+    /* Pour avoir deux colonnes avec une marge entre les images */
+    margin: 10px;
+    text-align: center;
+}
+
+.image {
+    max-width: 100%;
+    height: 400px;
+    width: 100%;
+    background-color: black;
+    padding: 2px;
+    margin: 2px;
+}

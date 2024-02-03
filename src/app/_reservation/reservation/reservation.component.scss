@@ -1,0 +1,93 @@
+/* reservation.component.scss */
+
+/* En-tête avec le nom du mois et de l'année */
+h1 {
+    text-align: center;
+}
+
+/* Contenu du calendrier */
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Jours de la semaine */
+// .weekdays {
+//     display: flex;
+//     justify-content: space-around;
+//     background-color: #eee;
+//     padding: 10px;
+//     margin-bottom: 10px;
+
+//     div {
+//         width: 30px;
+//         text-align: center;
+//         font-weight: bold;
+//     }
+// }
+
+/* Jours du mois */
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 30px);
+    gap: 5px;
+
+    div {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #ddd;
+        }
+
+        &.selected {
+            background-color: #3498db;
+            color: white;
+        }
+    }
+}
+
+/* reservation.component.scss */
+
+/* Jours de la semaine */
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 30px);
+    gap: 5px;
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 10px;
+
+    div {
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+
+/* Boutons pour changer de mois */
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+
+    button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 50%;
+        width: 30px;
+
+        &:hover {
+            background-color: #2980b9;
+        }
+    }
+}

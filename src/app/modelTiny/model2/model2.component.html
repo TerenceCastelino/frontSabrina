@@ -1,1 +1,9 @@
-<p>model2 works!</p>
+<!-- model1.component.html -->
+<p>model1 works!</p>
+
+<div class="image-container">
+  <div *ngFor="let img of images">
+    <p>{{ img.nomImage }}</p>
+    <img class="image" [src]="chemin + img.chemin" alt="Image">
+  </div>
+</div>

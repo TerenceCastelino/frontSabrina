@@ -1,2 +1,35 @@
-<p>home works!</p>
+<!-- home.component.html -->
 
+<div class="image-container">
+    <div class="image-box">
+        <img class="image" [src]="chemin + url1" alt="Image Model 1">
+        <div class="description">
+            <p>Description de la Tiny House Model 1...</p>
+            <br>
+            <button [routerLink]="['/modelOne']">Le Model 1</button>
+        </div>
+    </div>
+    <div class="image-box">
+        <img class="image" [src]="chemin + url2" alt="Image Model 2">
+        <div class="description">
+            <p>Description de la Tiny House Model 2...</p>
+            <br>
+            <button [routerLink]="['/modelTwo']">Le Model 2</button>
+        </div>
+    </div>
+</div>
+<div class="site-description">
+    <h2>Bienvenue sur LuxeTinyHouse</h2>
+    <p>Découvrez le luxe au cœur de la nature avec LuxeTinyHouse, votre destination exclusive pour des expériences de séjour uniques au Congo. Nichées près d'une réserve naturelle préservée, nos Tiny Houses offrent une expérience de vacances sans pareil.</p>
+
+    <p>Explorez un concept novateur qui redéfinit le luxe dans l'hébergement. Nos Tiny Houses, conçues avec élégance, offrent un confort moderne dans un espace compact, vous permettant de vous reconnecter avec la nature sans sacrifier le style. Chaque détail est pensé pour créer une atmosphère de tranquillité et d'exclusivité.</p>
+
+    <p>Chez LuxeTinyHouse, nous sommes fiers d'apporter une touche de modernité et de sophistication à un paysage naturel préservé. Profitez de la sérénité de la réserve naturelle tout en bénéficiant des commodités haut de gamme de nos Tiny Houses.</p>
+
+    <p>Le concept du Tiny House, encore inédit dans la région, vous offre une expérience unique, alliant confort et respect de l'environnement. C'est l'occasion de vivre une aventure inoubliable, loin du quotidien, dans un cadre luxueux et exclusif.</p>
+
+    <p>Réservez dès maintenant votre séjour avec LuxeTinyHouse et plongez dans un monde où le luxe rencontre la nature d'une manière jamais vue auparavant.</p>
+</div>
+<div class="button-container">
+    <button [routerLink]="['/reservation']">Réserver une Tiny House</button>
+</div>

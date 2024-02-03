@@ -11,6 +11,7 @@ import { EnvoisMailPasswordComponent } from './auth/envois-mail-password/envois-
 import { AdminDashboardComponent } from './adminDashboard/admin-dashboard/admin-dashboard.component';
 import { Model1Component } from './modelTiny/model1/model1.component';
 import { Model2Component } from './modelTiny/model2/model2.component';
+import { ReservationComponent } from './_reservation/reservation/reservation.component';
 
 
 
@@ -26,6 +27,7 @@ const routes: Routes = [
   { path: 'resetPassword/:urlResetPasswordHash', component: ResetPasswordComponent },
   { path: 'modelOne', component: Model1Component },
   { path: 'modelTwo', component: Model2Component },
+  { path: 'reservation', component: ReservationComponent, canActivate: [AuthGuard] },
 
 
   // { path : '404', component: },

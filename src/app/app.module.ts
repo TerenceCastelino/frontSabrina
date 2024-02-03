@@ -19,7 +19,8 @@ import { ResetPasswordComponent } from './auth/reset-passeword/reset-passeword.c
 import { EnvoisMailPasswordComponent } from './auth/envois-mail-password/envois-mail-password.component';
 import { AdminDashboardComponent } from './adminDashboard/admin-dashboard/admin-dashboard.component';
 import { Model1Component } from './modelTiny/model1/model1.component';
-import { Model2Component } from './modelTiny/model2/model2.component'; // Assurez-vous que le chemin est correct
+import { Model2Component } from './modelTiny/model2/model2.component';
+import { ReservationComponent } from './_reservation/reservation/reservation.component'; // Assurez-vous que le chemin est correct
 
 
 
@@ -37,7 +38,8 @@ import { Model2Component } from './modelTiny/model2/model2.component'; // Assure
     EnvoisMailPasswordComponent,
     AdminDashboardComponent,
     Model1Component,
-    Model2Component
+    Model2Component,
+    ReservationComponent
 
 
 
